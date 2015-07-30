@@ -1,0 +1,54 @@
+@import 'variables.less';
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  line-height: 1.4;
+  font-family: @defaultFont;
+  color: @defaultColor;
+}
+
+.container {
+  padding-right: 1em;
+  padding-left: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: @titleFont,
+}
+
+p {
+  margin: 0 0 0.75em;
+}
+
+.SlackClone {
+  display: flex;
+  min-height: 100vh;
+  // flex-direction: column;
+}
