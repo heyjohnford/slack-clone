@@ -27,10 +27,26 @@
   position: fixed;
 }
 
+.u-relative {
+  position: relative;
+}
+
 .u-textTruncate {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
+}
+
+.u-textShadow-light {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.u-transition(@target: all, @duration: 0.2s, @animation: ease-out) {
+  transition: @target @duration @animation;
+}
+
+.u-halfOpacity {
+  opacity: 0.5;
 }

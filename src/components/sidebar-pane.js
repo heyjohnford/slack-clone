@@ -1,12 +1,14 @@
 'use strict';
 
 import React from 'react';
+import UserHeader from './user-header';
 
 class SidebarPane extends React.Component {
 
   render() {
     return (
-      <div className="SidebarPane grid-column--1of5">
+      <div className="SidebarPane u-relative">
+        <UserHeader />
         <div className="container">
         </div>
       </div>

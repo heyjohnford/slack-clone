@@ -10,7 +10,10 @@ function onBuild(done) {
     if (err) {
       console.log('Error', err);
     } else {
-      console.log(stats.toString());
+      if (process.env.NODE_ENV === 'development') {
+        console.log(stats.toString());
+      }
+      console.log('Building webpack...');
     }
 
     if (done) {
@@ -22,7 +25,7 @@ function onBuild(done) {
 gulp.task('default', ['less', 'webpack', 'eslint']);
 gulp.task('dev', ['less', 'webpack', 'eslint', 'watch']);
 
-gulp.task('less', function(done) {
+gulp.task('less', function() {
   return gulp.src('./public/css/app.less')
     .pipe(less())
     .pipe(minifyCSS())
@@ -33,7 +36,7 @@ gulp.task('webpack', function(done) {
   webpack(webpackConfig).run(onBuild(done));
 });
 
-gulp.task('eslint', function(done) {
+gulp.task('eslint', function() {
   var eslintConfig = {
     rules: {
       quotes: [2, 'single']

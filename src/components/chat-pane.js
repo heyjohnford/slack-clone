@@ -8,7 +8,7 @@ class ChatPane extends React.Component {
     return (
       <div className="ChatPane">
         <div className="container">
-          <h2>Hey There!</h2>
+          <h2></h2>
         </div>
       </div>
     );

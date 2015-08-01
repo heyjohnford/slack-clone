@@ -1,0 +1,28 @@
+@hoverColor: darken(@sidebarColor, 10%);
+
+.UserHeader {
+  color: @white;
+  overflow: hidden;
+  position: absolute;
+  padding: 1em 0;
+  cursor: pointer;
+  width: 100%;
+  border-bottom: @hoverColor;
+  .u-transition;
+  &:hover {
+    background: @hoverColor;
+  }
+}
+
+.UserHeader-content {
+  color: @sidebarTextColor;
+  .u-transition;
+}
+
+.UserHeader:hover .UserHeader-content {
+  color: @white;
+}
+
+.UserHeader-teamTitle {
+  color: @white;
+}

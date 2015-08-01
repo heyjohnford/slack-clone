@@ -9,7 +9,8 @@ class UserStatus extends React.Component {
       <div className="UserStatus">
         <div className="grid--fit">
           <div className="grid-cell">
-            <small>johnamiahford</small>
+            <span title={this.props.userStatus} className="UserStatus-indicator"></span>
+            <small>username</small>
           </div>
         </div>
       </div>
@@ -17,5 +18,9 @@ class UserStatus extends React.Component {
   }
 
 }
+
+UserStatus.defaultProps = {
+  userStatus: 'offline'
+};
 
 export default UserStatus;
