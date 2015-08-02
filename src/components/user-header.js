@@ -9,13 +9,13 @@ class UserHeader extends React.Component {
     return (
       <div className="UserHeader">
         <div className="container">
-          <div className="UserHeader-content grid grid--3of4">
+          <div className="UserHeader-content grid">
             <div className="grid-cell">
               <h4 className="UserHeader-teamTitle u-textTruncate">{this.props.teamName}</h4>
               <UserStatus />
             </div>
-            <div className="grid grid--1of4">
-              <div className="grid-cell">
+            <div className="grid--1of4">
+              <div className="grid-cell u-textRight">
                 <i className="icon icon_chevron_large_down"></i>
               </div>
             </div>

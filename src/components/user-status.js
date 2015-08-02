@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import OnlineIndicator from './online-indicator';
 
 class UserStatus extends React.Component {
 
@@ -9,7 +10,12 @@ class UserStatus extends React.Component {
       <div className="UserStatus">
         <div className="grid--fit">
           <div className="grid-cell">
-            <span title={this.props.userStatus} className="UserStatus-indicator"></span>
+            <OnlineIndicator
+              title={this.props.userStatus}
+              className="UserStatus-indicator"
+              online={false}
+              height="8px"
+              width="8px" />
             <small>username</small>
           </div>
         </div>

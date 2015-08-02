@@ -2,6 +2,7 @@
 
 import React from 'react';
 import UserHeader from './user-header';
+import Channels from './channels';
 
 class SidebarPane extends React.Component {
 
@@ -10,6 +11,7 @@ class SidebarPane extends React.Component {
       <div className="SidebarPane u-relative">
         <UserHeader />
         <div className="container">
+          <Channels />
         </div>
       </div>
     );
