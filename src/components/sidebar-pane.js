@@ -3,6 +3,8 @@
 import React from 'react';
 import UserHeader from './user-header';
 import Channels from './channels';
+import DirectMessages from './direct-messages';
+import PrivateGroups from './private-groups';
 
 class SidebarPane extends React.Component {
 
@@ -10,9 +12,17 @@ class SidebarPane extends React.Component {
     return (
       <div className="SidebarPane u-relative">
         <UserHeader />
-        <div className="container">
-          <Channels />
-        </div>
+        <ul className="SidebarPane-list container">
+          <li className="SidebarPane-listItem">
+            <Channels />
+          </li>
+          <li className="SidebarPane-listItem">
+              <DirectMessages />
+          </li>
+          <li className="SidebarPane-listItem">
+            <PrivateGroups />
+          </li>
+        </ul>
       </div>
     );
   }
